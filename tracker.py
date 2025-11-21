@@ -1,12 +1,11 @@
 import json
+
 from confluent_kafka import Consumer
 
 consumer_config = {
     "bootstrap.servers": "localhost:9092",
     "group.id": "order-tracker",
-    "auto.offset.reset": "earliest",
-    "enable.auto.commit": True,
-    "session.timeout.ms": 10000
+    "auto.offset.reset": "earliest"
 }
 
 consumer = Consumer(consumer_config)
